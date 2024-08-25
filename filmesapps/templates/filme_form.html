@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar/Editar Filme</title>
+</head>
+<body>
+    <h1>Criar/Editar Filme</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{% url 'filme_list' %}">Voltar para a lista</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- filmesapps/templates/filme_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes do Filme</title>
+</head>
+<body>
+    <h1>{{ filme.titulo }}</h1>
+    <p>Gênero: {{ filme.genero }}</p>
+    <p>Ano de Lançamento: {{ filme.ano_lancamento }}</p>
+    <a href="{% url 'filme_update' filme.pk %}">Editar</a>
+    <a href="{% url 'filme_delete' filme.pk %}">Deletar</a>
+    <a href="{% url 'filme_list' %}">Voltar para a lista</a>
+</body>
+</html>
